@@ -15,10 +15,13 @@ public class Pessoa {
 
     private String apelido;
 
-    public Pessoa(Integer id, String nome, String apelido) {
+    private Boolean status = true;
+
+    public Pessoa(Integer id, String nome, String apelido, Boolean status) {
         this.id = id;
         this.nome = nome;
         this.apelido = apelido;
+        this.status = status;
     }
 
     public Pessoa() {
@@ -46,6 +49,14 @@ public class Pessoa {
 
     public void setApelido(String apelido) {
         this.apelido = apelido;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 
     @Override

@@ -1,6 +1,5 @@
 package my.app.controller;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Get;
@@ -16,7 +15,6 @@ public class Controller {
     List<String> nomes = new ArrayList<>();
 
     @Get("teste")
-//    @Produces(MediaType.APPLICATION_JSON)
     public String teste() {
         return "DEU CERTO";
     }

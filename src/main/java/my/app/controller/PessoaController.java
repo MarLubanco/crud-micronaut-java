@@ -8,6 +8,7 @@ import my.app.model.Pessoa;
 import my.app.service.PessoaService;
 
 import javax.inject.Inject;
+import java.util.List;
 
 @Controller("/api/pessoas")
 public class PessoaController {
@@ -23,5 +24,10 @@ public class PessoaController {
     @Post
     public Pessoa savePessoa(@Body Pessoa pessoa) {
         return pessoaService.savePessoa(pessoa);
+    }
+
+    @Get("/ativas")
+    public List<Pessoa> findPessoasAtivas() {
+        return pessoaService.retornaPessoasAtivas();
     }
 }
